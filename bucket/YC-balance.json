@@ -1,0 +1,11 @@
+[
+    {
+        "name": "YC balance",
+        "description": "运行游戏时, 切换为平衡模式",
+        "priority": 1,
+        "condition": "frontPkgChanged == true && to == \"com.tencent.tmgp.sgame\"",
+        "actions": [
+            "su.exe(\"sh /data/powercfg.sh balance\");"
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Wlan vibrate",
+        "description": "接入指定 Wlan 时, 切换为振动模式",
+        "priority": 1,
+        "condition": "wifiStateChanged == true && wifiState.ssid == \"\\\"RUGELACH\\\"\"",
+        "actions": [
+            "audio.setRingerMode(1);"
+        ]
+    }
+]

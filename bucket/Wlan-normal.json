@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Wlan normal",
+        "description": "未接入指定 Wlan 时, 切换为常规模式",
+        "priority": 1,
+        "condition": "wifiStateChanged == true && wifiState.ssid != \"\\\"RUGELACH\\\"\"",
+        "actions": [
+            "audio.setRingerMode(0);",
+            "audio.setRingerMode(2);"
+        ]
+    }
+]
