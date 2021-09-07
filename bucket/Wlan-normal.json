@@ -3,7 +3,7 @@
         "name": "Wlan normal",
         "description": "未接入指定 Wlan 时, 切换为常规模式",
         "priority": 1,
-        "condition": "wifiStateChanged == true && wifiState.ssid != null && wifiState.ssid != \"\\\"RUGELACH\\\"\"",
+        "condition": "wifiStateChanged == true && wifiState.ssid != null && wifiState.ssid != \"\\\"RUGELACH\\\"\" && wifiState.ssid != \"\\\"DEET\\\"\"",
         "actions": [
             "audio.setRingerMode(2);"
         ]

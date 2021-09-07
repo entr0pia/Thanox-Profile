@@ -3,7 +3,7 @@
         "name": "Wlan vibrate",
         "description": "接入指定 Wlan 时, 切换为振动模式",
         "priority": 1,
-        "condition": "wifiStateChanged == true && wifiState.ssid == \"\\\"RUGELACH\\\"\"",
+        "condition": "wifiStateChanged == true && (wifiState.ssid == \"\\\"RUGELACH\\\"\" || wifiState.ssid == \"\\\"DEET\\\"\")",
         "actions": [
             "audio.setRingerMode(1);"
         ]

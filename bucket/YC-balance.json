@@ -5,7 +5,8 @@
         "priority": 1,
         "condition": "frontPkgChanged == true && to == \"com.tencent.tmgp.sgame\"",
         "actions": [
-            "su.exe(\"sh /data/powercfg.sh balance\");"
+            "su.exe(\"sh /data/powercfg.sh balance\");",
+            "hw.disableWifi();"
         ]
     }
 ]
