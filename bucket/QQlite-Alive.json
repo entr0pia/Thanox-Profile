@@ -1,0 +1,12 @@
+[
+    {
+        "name": "QQlite-Alive",
+        "description": "QQ手表版保活. 如果系统无法主动结束标准版QQ, 请关闭标准版QQ的在Thanox中后台运行权限",
+        "priority": 2,
+        "condition": "!thanos.activityManager.isPackageRunning(\"com.tencent.qqlite\") && !thanos.activityManager.isPackageRunning(\"com.tencent.mobileqq\")",
+        "actions": [
+            "su.exe(\"am start-foreground-service com.tencent.qqlite/com.tencent.mobileqq.app.CoreService\")",
+            "su.exe(\"am start-foreground-service com.tencent.qqlite/com.tencent.mobileqq.msf.service.MsfService\")"
+        ]
+    }
+]
