@@ -5,9 +5,8 @@
         "priority": 1,
         "condition": "notificationAdded == true && pkgName == \"com.tencent.qqlite\"",
         "actions": [
-            "activity.launchProcessForPackage(\"com.tencent.mobileqq\")",
-            "su.exe(\"am start-foreground-service com.tencent.mobileqq/com.tencent.mobileqq.msf.service.MsfService\")",
-            "killer.killPackage(\"com.tencent.qqlite\")"
+            "if(!thanos.activityManager.isPackageRunning(\"com.tencent.mobileqq\")){activity.launchProcessForPackage(\"com.tencent.mobileqq\");su.exe(\"am start-foreground-service com.tencent.mobileqq/com.tencent.mobileqq.msf.service.MsfService\")}",
+            "android.app.INotificationManager.Stub.asInterface(android.os.ServiceManager.getService(\"notification\")).cancelAllNotifications(\"com.tencent.qqlite\", 0)"
         ]
     }
 ]
